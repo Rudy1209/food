@@ -14,7 +14,7 @@ model_ft, data_transforms, class_names = create_model()
 
 def predict_prob(img_path):
 
-    df = pd.read_csv('indian_food_df_needed (1).csv', index_col='name')
+    df = pd.read_csv('https://github.com/Rudy1209/food/blob/main/indian_food_df_needed (1).csv', index_col='name')
     was_training = model_ft.training
     model_ft.eval()
     t0 = time.time()
@@ -36,10 +36,10 @@ def predict_prob(img_path):
 title  = "Indian Food Classifier and Nutritional value Calculator"
 description = "Identity the food in the picture and a get a description of their nutritional value"
 article = "Works for Indian cuisine only and does not pick on fast foods"
-example_list = [['biryani.jpg'],
- ['butter_chicken.jpg'],
- ['chana_masala.jpg'],
- ['gulab_jamoon.jpg']]
+example_list = [['https://github.com/Rudy1209/food/blob/main/biryani.jpg'],
+ ['https://github.com/Rudy1209/food/blob/main/butter_chicken.jpg'],
+ ['https://github.com/Rudy1209/food/blob/main/chana_masala.jpg'],
+ ['https://github.com/Rudy1209/food/blob/main/gulab_jamoon.jpg']]
 
 
 demo = gr.Interface(
